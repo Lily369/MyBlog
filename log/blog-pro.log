@@ -1,0 +1,5 @@
+2019-09-16 21:08:35.339  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : Starting BlogApplicationTests on DESKTOP-V49UK41 with PID 10116 (started by False in F:\SpringBoot²©¿Í\three\blog)
+2019-09-16 21:08:35.393  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : The following profiles are active: pro
+2019-09-16 21:08:56.324  WARN 10116 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-16 21:08:56.518  WARN 10116 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2019-09-16 21:08:57.011  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : Started BlogApplicationTests in 22.274 seconds (JVM running for 23.372)
