@@ -1,5 +1,151 @@
-2019-09-16 21:08:35.339  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : Starting BlogApplicationTests on DESKTOP-V49UK41 with PID 10116 (started by False in F:\SpringBoot≤©øÕ\three\blog)
-2019-09-16 21:08:35.393  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : The following profiles are active: pro
-2019-09-16 21:08:56.324  WARN 10116 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-16 21:08:56.518  WARN 10116 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
-2019-09-16 21:08:57.011  INFO 10116 --- [main] com.lily.blog.BlogApplicationTests       : Started BlogApplicationTests in 22.274 seconds (JVM running for 23.372)
+2019-09-20 16:42:32.328  INFO 10432 --- [restartedMain] com.lily.blog.BlogApplication            : Starting BlogApplication on DESKTOP-V49UK41 with PID 10432 (started by False in F:\SpringBootÂçöÂÆ¢\three\blog)
+2019-09-20 16:42:32.341  INFO 10432 --- [restartedMain] com.lily.blog.BlogApplication            : The following profiles are active: pro
+2019-09-20 16:43:28.320 ERROR 10432 --- [Druid-ConnectionPool-Create-318604451] com.alibaba.druid.pool.DruidDataSource   : create connection SQLException, url: jdbc:mysql://139.155.35.114:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone= Asia/Shanghai, errorCode 0, state 08S01
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1560) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1623) ~[druid-1.1.10.jar:1.1.10]
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2468) ~[druid-1.1.10.jar:1.1.10]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_144]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_144]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_144]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_144]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:541) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:711) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:688) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:130) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:540) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:202) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1348) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:163) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:947) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:817) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	... 9 common frames omitted
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:535) ~[mysql-connector-java-8.0.17.jar:8.0.17]
+	... 18 common frames omitted
+
+2019-09-20 16:43:39.231  WARN 10432 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 16:43:39.510  WARN 10432 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2019-09-20 16:43:39.957  INFO 10432 --- [restartedMain] com.lily.blog.BlogApplication            : Started BlogApplication in 68.544 seconds (JVM running for 69.811)
+2019-09-20 16:43:52.789  INFO 10432 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:44:21.876  INFO 22432 --- [restartedMain] com.lily.blog.BlogApplication            : Starting BlogApplication on DESKTOP-V49UK41 with PID 22432 (started by False in F:\SpringBootÂçöÂÆ¢\three\blog)
+2019-09-20 16:44:21.880  INFO 22432 --- [restartedMain] com.lily.blog.BlogApplication            : The following profiles are active: pro
+2019-09-20 16:44:27.596  WARN 22432 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 16:44:27.705  WARN 22432 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2019-09-20 16:44:28.299  INFO 22432 --- [restartedMain] com.lily.blog.BlogApplication            : Started BlogApplication in 6.83 seconds (JVM running for 7.723)
+2019-09-20 16:45:05.832  INFO 22432 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:45:10.931  WARN 22432 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-20 16:45:11.010  WARN 22432 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-20 16:45:11.373  INFO 22432 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:47:37.715  INFO 22432 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:47:38.513  INFO 22432 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:48:34.029  INFO 9336 --- [restartedMain] com.lily.blog.BlogApplication            : Starting BlogApplication on DESKTOP-V49UK41 with PID 9336 (started by False in F:\SpringBootÂçöÂÆ¢\three\blog)
+2019-09-20 16:48:34.031  INFO 9336 --- [restartedMain] com.lily.blog.BlogApplication            : The following profiles are active: pro
+2019-09-20 16:48:38.925  WARN 9336 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 16:48:39.178  WARN 9336 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2019-09-20 16:48:39.491  INFO 9336 --- [restartedMain] com.lily.blog.BlogApplication            : Started BlogApplication in 5.855 seconds (JVM running for 6.738)
+2019-09-20 16:50:47.131  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:50:47.757  WARN 9336 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-20 16:50:47.812  WARN 9336 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2019-09-20 16:50:48.023  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:50:49.417  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:50:49.708  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:51:01.762  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:51:02.508  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:51:03.642  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:51:04.087  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:51:14.426  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:51:15.401  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:51:16.339  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:51:16.583  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:51:31.734  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:51:32.414  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:51:33.477  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:51:33.729  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:52:04.138  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:52:06.335  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:52:11.224  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:52:12.781  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:54:24.096  INFO 9336 --- [http-nio-8080-exec-3] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:54:24.375  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:54:27.042  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:54:27.305  INFO 9336 --- [http-nio-8080-exec-3] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:54:29.225  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:54:29.567  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:55:00.217  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:55:00.987  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:55:02.152  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:55:02.452  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:55:07.297  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:55:07.476  INFO 9336 --- [http-nio-8080-exec-5] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:55:07.630  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:55:07.807  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:55:08.098  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:55:08.386  INFO 9336 --- [http-nio-8080-exec-5] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:55:14.174  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:55:14.629  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:55:15.748  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:55:16.240  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:56:50.207  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:56:51.235  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:56:52.642  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:56:52.940  INFO 9336 --- [http-nio-8080-exec-2] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:58:19.777  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:58:20.562  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:58:21.714  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:58:22.230  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 16:59:50.276  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 16:59:51.189  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 16:59:52.288  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 16:59:52.558  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 17:01:03.563  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:01:04.911  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:01:06.187  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 17:01:06.646  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 17:02:13.004  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:02:13.802  INFO 9336 --- [http-nio-8080-exec-7] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:02:14.916  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 17:02:15.179  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 17:03:01.014  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:03:03.162  INFO 9336 --- [http-nio-8080-exec-9] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:03:06.409  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 17:03:06.677  INFO 9336 --- [http-nio-8080-exec-6] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 17:03:52.180  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:03:55.257  INFO 9336 --- [http-nio-8080-exec-4] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:04:13.072  INFO 9336 --- [http-nio-8080-exec-3] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:04:13.498  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:04:13.795  INFO 9336 --- [http-nio-8080-exec-5] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:04:16.160  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: createTime: DESC], {}]}
+2019-09-20 17:04:22.849  INFO 9336 --- [http-nio-8080-exec-3] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:04:26.188  INFO 9336 --- [http-nio-8080-exec-8] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:04:28.006  INFO 9336 --- [http-nio-8080-exec-5] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:04:37.670  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Request : {url='http://localhost:8080/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.lily.blog.web.IndexController.newblogs', args=[{}]}
+2019-09-20 17:04:41.656  INFO 9336 --- [http-nio-8080-exec-10] com.lily.blog.aspect.LogAspect           : Result : _fragments :: newblogList
+2019-09-20 17:04:51.254  INFO 9336 --- [http-nio-8080-exec-1] com.lily.blog.aspect.LogAspect           : Result : index
+2019-09-20 17:07:05.391  INFO 13240 --- [main] com.lily.blog.BlogApplicationTests       : Starting BlogApplicationTests on DESKTOP-V49UK41 with PID 13240 (started by False in F:\SpringBoot≤©øÕ\three\blog)
+2019-09-20 17:07:05.395  INFO 13240 --- [main] com.lily.blog.BlogApplicationTests       : The following profiles are active: pro
+2019-09-20 17:07:14.910  WARN 13240 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-09-20 17:07:15.160  WARN 13240 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Unknown Template Mode 'LEGANCYHTML5'. Must be one of: 'HTML', 'XML', 'TEXT', 'JAVASCRIPT', 'CSS', 'RAW'. Using default Template Mode 'HTML'.
+2019-09-20 17:07:15.640  INFO 13240 --- [main] com.lily.blog.BlogApplicationTests       : Started BlogApplicationTests in 10.752 seconds (JVM running for 12.964)

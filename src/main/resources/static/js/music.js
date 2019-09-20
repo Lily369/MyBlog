@@ -106,7 +106,7 @@ function LoadCplayer(list) {
     });
 }
 
-var playlist = '34218357,1359811297,29715402,1351973067';
+var playlist = '482999247';
 var zoomOutKana = GetQueryString('zoomOutKana') || false;
 if (zoomOutKana == 'false') {
     zoomOutKana = false;
