@@ -60,25 +60,29 @@
                     <div class="ui purple basic left pointing label m-margin-tb-tiny">Java</div>
                     <div class="ui purple basic left pointing label m-margin-tb-tiny">JavaScript</div>
                     <div class="ui purple basic left pointing label m-margin-tb-tiny">Vue</div>
-                    <div class="ui purple basic left pointing label m-margin-tb-tiny">SpringBoot</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">Spring&nbsp;Boot</div>
                     <div class="ui purple basic left pointing label m-margin-tb-tiny">MyBatis</div>
-                    <div class="ui purple basic left pointing label m-margin-tb-tiny">MYSQL</div>
+                    <div class="ui purple basic left pointing label m-margin-tb-tiny">MySQL</div>
                     <div class="ui purple basic left pointing label m-margin-tb-tiny">...</div>
                 </div>
                 <div class="ui attached attached segment">
                     <a href="#" class="ui circular icon button"><i class="github icon"></i></a>
                     <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-                    <a href="http://wpa.qq.com/msgrd?v=3&uin=1174685710&site=qq&menu=yes" target="_blank" class="ui qq circular icon button" data-content="1174685710" data-position="top center"><i class="qq icon"></i></a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=1309067535&site=qq&menu=yes" target="_blank" class="ui qq circular icon button" ><i class="qq icon"></i></a>
                 </div>
 
                 <div class="ui wechat-qr flowing popup transition hidden">
                     <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 110px">
                 </div>
+                <div class="ui QQ-qr1 flowing popup transition hidden">
+                    <img src="../static/images/QQ.jpg" th:src="@{/images/QQ.jpg}" alt="" class="ui rounded image" style="width: 110px">
+                </div>
                 <div class="ui top attached segment">
                     友情链接
                 </div>
                 <div class="ui bottom attached segment">
-                    <i class="chess queen icon"></i><span><a href="http://log4j.xyz/" target="_blank">刘俊伟</a></span>
+                    <i class="chess queen icon"></i><span><a href="http://log4j.xyz/" target="_blank">刘俊伟</a></span>&nbsp;&nbsp;&nbsp;
+                    <i class="chess queen icon"></i><span><a href="http://39.106.191.14" target="_blank">赵邓境</a></span>
                 </div>
             </div>
         </div>
@@ -109,8 +113,8 @@
             <div class="three wide column">
                 <h4 class="yi inverted header m-text-thin m-text-spaced">联系我</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Email：1174685710@qq.com</a>
-                    <a href="#" class="item">QQ：1174685710</a>
+                    <a href="#" class="item">Email：sakura369y@163.com</a>
+                    <a href="#" class="item">QQ：1309067535</a>
                 </div>
             </div>
             <div class="seven wide column">
@@ -132,9 +136,14 @@
     });
     $('.wechat').popup({
         popup : $('.wechat-qr'),
+        on : 'hover',
         position : 'top center'
     });
-    $('.qq').popup();
+    $('.qq').popup({
+        popup : $('.QQ-qr1'),
+        on : 'hover',
+        position : 'top center'
+    });
 </script>
 </body>
 </html>
